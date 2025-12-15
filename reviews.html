@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Отзывы — Chérie</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<div class="container">
+<header class="header">
+  <div class="logo">Chérie</div>
+  <nav id="nav" class="nav">
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="masters.html">Мастера</a>
+    <a href="portfolio.html">Портфолио</a>
+    <a href="blog.html">Блог</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="contacts.html">Контакты</a>
+    <a class="btn-primary" href="booking.html">Записаться</a>
+    <a href="index.html" class="btn-primary">На главную</a>
+  </nav>
+  <button id="themeToggle" class="btn-primary" style="margin-left:15px">🌙</button>
+    <button class="burger" id="burgerBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</header>
+
+<section class="section">
+  <h2>Отзывы</h2>
+<form id="reviewForm" class="review-form">
+  <input id="reviewName" class="input" type="text" placeholder="Имя" required>
+
+  <select id="reviewRating" class="input">
+    <option value="5">★★★★★</option>
+    <option value="4">★★★★☆</option>
+    <option value="3">★★★☆☆</option>
+    <option value="2">★★☆☆☆</option>
+    <option value="1">★☆☆☆☆</option>
+  </select>
+
+  <textarea id="reviewText" class="input" placeholder="Ваш отзыв" required></textarea>
+
+  <button type="submit" class="btn-primary">Отправить</button>
+</form>
+<div id="reviewsList" class="reviews-list"></div>
+</section>
+</div>
+<script src="js/scripts.js" defer></script>
+<nav class="burger-menu" id="burgerMenu">
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="masters.html">Мастера</a></li>
+    <li><a href="portfolio.html">Портфолио</a></li>
+    <li><a href="blog.html">Блог</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+</nav>
+
+<div class="burger-overlay" id="burgerOverlay"></div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Онлайн запись — Chérie</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<div class="container">
+<header class="header">
+  <div class="logo">Chérie</div>
+  <nav id="nav" class="nav">
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="masters.html">Мастера</a>
+    <a href="portfolio.html">Портфолио</a>
+    <a href="blog.html">Блог</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="contacts.html">Контакты</a>
+    <a class="btn-primary" href="booking.html">Записаться</a>
+    <a href="index.html" class="btn-primary">На главную</a>
+  </nav>
+  <button id="themeToggle" class="btn-primary" style="margin-left:15px">🌙</button>
+    <button class="burger" id="burgerBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</header>
+<section class="section">
+  <h2>Онлайн запись</h2>
+  <form id="BookingForm">
+  <div style="display:flex;gap:18px;flex-wrap:wrap">
+    <div style="flex:1;min-width:280px" class="panel">
+      <h3>1. Выберите услугу</h3>
+      <select id="serviceSelect" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+        <option value="">— выбрать —</option>
+        <option value="manicure">Маникюр — Комбинированный / аппаратный маникюр без покрытия</option>
+        <option value="manicure">Маникюр — Комбинированный/ аппаратный маникюр + выравнивание + покрытие LUXIO</option>
+        <option value="manicure">Маникюр — Маникюр + выравнивание + покрытие базой</option>
+        <option value="manicure">Маникюр — Маникюр + укрепление гелем</option>
+        <option value="manicure">Маникюр — Маникюр + укрепление гелем + покрытие LUXIO</option>
+        <option value="manicure">Маникюр — Мужской маникюр</option>
+        <option value="manicure">Маникюр — Парафиновые ванночки для рук</option>
+        <option value="pedicure">Педикюр — Комбинированный / аппаратный педикюр без покрытия</option>
+        <option value="pedicure">Педикюр — Комбинированный/ аппаратный маникюр + выравнивание + покрытие LUXIO</option>
+        <option value="pedicure">Педикюр — Педикюр + выравнивание + покрытие базой</option>
+        <option value="pedicure">Педикюр — Педикюр + укрепление гелем</option>
+        <option value="pedicure">Педикюр — Педикюр + укрепление гелем + покрытие LUXIO</option>
+        <option value="pedicure">Педикюр — Парафиновые ванночки для ног</option>
+        <option value="brows">Брови — Ламинирования</option>
+        <option value="brows">Брови — Окрашивание</option>
+        <option value="brows">Брови — Коррекция</option>
+        <option value="lashes">Ресницы — Наращивание</option>
+        <option value="lashes">Ресницы — Ламинирование</option>
+      </select>
+      <div style="margin-top:12px">
+        <h4>Выберите мастера</h4>
+        <select id="masterSelect" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+          <option value="">— выбрать —</option>
+          <option value="manicure">Мария — Маникюр</option>
+          <option value="manicure">Анна — Маникюр</option>
+          <option value="manicure">Кристина — Маникюр</option>
+          <option value="pedicure">Ирина — Педикюр</option>
+          <option value="pedicure">Светлана — Педикюр</option>
+          <option value="brows">Елена — Брови</option>
+          <option value="brows">Дарья — Брови</option>
+          <option value="brows">Ольга — Брови</option>
+          <option value="lashes">Виктория — Ресницы</option>
+          <option value="lashes">Алена — Ресницы</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="flex:1;min-width:280px" class="panel">
+      <h3>2. Дата и время</h3>
+      <div class="calendar-container">
+        <label for="bookingDate">Выберите дату:</label>
+        <input type="date" id="bookingDate" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-bottom:8px">
+      
+        <label for="bookingTime">Выберите время:</label>
+        <select id="bookingTime" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)">
+          <option value="">— выбрать —</option>
+          <option value="09:00">09:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+          <option value="13:00">13:00</option>
+          <option value="14:00">14:00</option>
+          <option value="15:00">15:00</option>
+          <option value="16:00">16:00</option>
+          <option value="17:00">17:00</option>
+        </select>
+      </div>
+
+    <div style="flex:1;min-width:280px" class="panel">
+      <h3>3. Подтверждение</h3>
+      <input id="clientName" placeholder="Имя" class="input" style="width:100%;padding:10px;margin-bottom:8px">
+      <input id="clientPhone" placeholder="Телефон" class="input" style="width:100%;padding:10px;margin-bottom:8px">
+      <button type="submit" id="confirmBooking" class="btn-primary" style="width:100%">Подтвердить запись</button>
+    </div>
+  </div>
+</form>
+</section>
+</div>
+<script src="js/scripts.js" defer></script>
+<nav class="burger-menu" id="burgerMenu">
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="masters.html">Мастера</a></li>
+    <li><a href="portfolio.html">Портфолио</a></li>
+    <li><a href="blog.html">Блог</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+</nav>
+
+<div class="burger-overlay" id="burgerOverlay"></div>
+</body>
+</html>

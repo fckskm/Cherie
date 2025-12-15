@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог — Chérie</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+<header class="header">
+    <div class="logo">Chérie</div>
+    <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="masters.html">Мастера</a>
+        <a href="portfolio.html">Портфолио</a>
+        <a href="blog.html" class="active">Блог</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="btn-primary" href="booking.html">Записаться</a>
+        <a href="index.html" class="btn-primary">На главную</a>
+    </nav>
+    <button id="themeToggle" class="btn-primary" style="margin-left:15px">🌙</button>
+      <button class="burger" id="burgerBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</header>
+
+<section class="blog">
+    <h1>Блог</h1>
+
+    <div class="blog-grid">
+
+        <div class="blog-card">
+            <img src="assets/img/blog1.jpg" class="blog img" loading="lazy" alt="blog1">
+            <div class="blog-content">
+                <h3>Тренды маникюра 2025</h3>
+                <p>Какие оттенки и дизайны будут в моде этой весной? Делимся вдохновением и примерами.</p>
+                <a href="#" class="btn-default1">Читать →</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="assets/img/blog2.jpg" class="blog img" loading="lazy" alt="blog2">
+            <div class="blog-content">
+                <h3>Как ухаживать за ногтями дома</h3>
+                <p>Простые советы, которые помогут сохранить здоровье и красоту ногтей.</p>
+                <a href="#" class="btn-default1">Читать →</a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="assets/img/blog3.jpg" class="blog img" loading="lazy" alt="blog3">
+            <div class="blog-content">
+                <h3>Идеи педикюра на лето</h3>
+                <p>Подборка самых стильных и ярких вариантов для пляжного сезона.</p>
+                <a href="#" class="btn-default1">Читать →</a>
+            </div>
+        </div>
+
+
+        
+    </div>
+</section>
+  </div>
+  <script src="js/scripts.js" defer></script>
+<nav class="burger-menu" id="burgerMenu">
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="masters.html">Мастера</a></li>
+    <li><a href="portfolio.html">Портфолио</a></li>
+    <li><a href="blog.html">Блог</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+</nav>
+
+<div class="burger-overlay" id="burgerOverlay"></div>
+</body>
+</html>

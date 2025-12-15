@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chérie — салон красоты</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+<header class="header">
+  <div class="logo">Chérie</div>
+  <nav id="nav" class="nav">
+    <a href="index.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="masters.html">Мастера</a>
+    <a href="portfolio.html">Портфолио</a>
+    <a href="blog.html">Блог</a>
+    <a href="reviews.html">Отзывы</a>
+    <a href="contacts.html">Контакты</a>
+    <a class="btn-primary" href="booking.html">Записаться</a>
+  </nav>
+  <button id="themeToggle" 
+          class="btn-primary" 
+          style="margin-left:15px">🌙
+  </button>
+  <button class="burger" id="burgerBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+</header>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-left">
+    <h1 id="hero-title">Chérie — салон твоей красоты</h1>
+    <p>Нежно, стильно и профессионально. Услуги маникюра, педикюра, бровей и ресниц.</p>
+    <div class="cta-row">
+      <button class="btn-primary" onclick="location.href='booking.html'">Записаться</button>
+    </div>
+  </div>
+  <div style="width:360px">
+    <img src="assets/img/home.jpg" alt="hero" style="width:100%;border-radius:10px;display:block;object-fit:cover">
+  </div>
+</section>
+
+<section class="section" id="services-preview">
+  <h2>Наши услуги</h2>
+  <div class="services-grid">
+    <div class="service-card service-card--small service-card">
+      <div class="icon">M</div>
+      <div style="font-weight:700;margin-top:8px">Маникюр</div>
+      <div style="margin-top:12px"><button data-book="manicure" class="btn-default">Записаться</button></div>
+    </div>
+    <div class="service-card service-card--small service-card">
+      <div class="icon">P</div>
+      <div style="font-weight:700;margin-top:8px">Педикюр</div>
+      <div style="margin-top:12px"><button data-book="pedicure" class="btn-default">Записаться</button></div>
+    </div>
+    <div class="service-card service-card--small service-card">
+      <div class="icon">B</div>
+      <div style="font-weight:700;margin-top:8px">Брови</div>
+      <div style="margin-top:12px"><button data-book="brows" class="btn-default">Записаться</button></div>
+    </div>
+  </div>
+  <div class="service-card service-card--small service-card">
+      <div class="icon">L</div>
+      <div style="font-weight:700;margin-top:8px">Ресницы</div>
+      <div style="margin-top:12px"><button data-book="manicure" class="btn-default">Записаться</button></div>
+    </div>
+</section>
+
+<section class="section">
+  <h2>Наши лучшие работы</h2>
+  <div class="mini-gallery">
+    <img src="assets/img/mini1.jpg" class="works img" loading="lazy" alt="work1">
+    <img src="assets/img/mini2.jpg" class="works img" loading="lazy" alt="work2">
+    <img src="assets/img/mini3.jpg" class="works img" loading="lazy" alt="work3">
+    <img src="assets/img/mini4.jpg" class="works img" loading="lazy" alt="work4">
+  </div>
+  <p><a class="btn-primary" href="portfolio.html">Смотреть все работы</a></p>
+</section>
+
+<section class="section about">
+  <div class="about-text">
+    <h2>О нас</h2>
+    <p class="small-muted">Chérie — уютный салон красоты с опытными мастерами и внимательным подходом к каждой клиентке. Мы используем безопасные материалы, следуем трендам и сохраняем индивидуальный подход.</p>
+  </div>
+</section>
+
+<footer>
+  <div style="padding:12px 0;color:var(--muted)">© Chérie, 2025</div>
+</footer>
+
+</div>
+<script src="js/scripts.js" defer></script>
+<nav class="burger-menu" id="burgerMenu">
+  <ul>
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="services.html">Услуги</a></li>
+    <li><a href="masters.html">Мастера</a></li>
+    <li><a href="portfolio.html">Портфолио</a></li>
+    <li><a href="blog.html">Блог</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+  </ul>
+</nav>
+
+<div class="burger-overlay" id="burgerOverlay"></div>
+</body>
+</html>
