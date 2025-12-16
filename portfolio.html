@@ -25,11 +25,6 @@
     <a href="index.html" class="btn-primary">На главную</a>
   </nav>
   <button id="themeToggle" class="btn-primary" style="margin-left:15px">🌙</button>
-    <button class="burger" id="burgerBtn">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
 </header>
 <div class="container1">
 <div class="slider" id="slider1">
@@ -86,11 +81,10 @@
           <img src="assets/img/portfolo19.jpg" class="slide" loading="lazy" alt="portfolio19">
       </div>
       <button class="btn prev">‹</button>
-    <button class="btn next">›</button>
-  </div>
-  <button data-book="brows" class="btn-default1">Записаться</button>
+      <button class="btn next">›</button>
     </div>
-</div>
+    <button data-book="brows" class="btn-default1">Записаться</button>
+    </div>
 <script src="js/scripts.js" defer></script>
 <nav class="burger-menu" id="burgerMenu">
   <ul>
@@ -105,5 +99,20 @@
 </nav>
 
 <div class="burger-overlay" id="burgerOverlay"></div>
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const burgerMenu = document.getElementById('burgerMenu');
+  const burgerOverlay = document.getElementById('burgerOverlay');
+
+  burgerBtn.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    burgerOverlay.classList.toggle('active');
+  });
+
+  burgerOverlay.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    burgerOverlay.classList.remove('active');
+  });
+</script>
 </body>
 </html>

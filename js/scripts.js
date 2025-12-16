@@ -52,24 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ====== Бургер-меню ======
-  const burgerBtn = document.getElementById('burgerBtn');
-  const burgerMenu = document.getElementById('burgerMenu');
-  const burgerOverlay = document.getElementById('burgerOverlay');
-
-  if (burgerBtn && burgerMenu && burgerOverlay) {
-    const toggleBurger = () => {
-      burgerMenu.classList.toggle('active');
-      burgerOverlay.classList.toggle('active');
-    };
-
-    burgerBtn.addEventListener('click', toggleBurger);
-    burgerOverlay.addEventListener('click', () => {
-      burgerMenu.classList.remove('active');
-      burgerOverlay.classList.remove('active');
-    });
-  }
-
   // ====== Слайдеры ======
   function initSlider(selector) {
     const slider = document.querySelector(selector);
@@ -135,52 +117,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ====== Форма отзывов ======
   const reviewForm = document.getElementById('reviewForm');
-  const reviewsList = document.getElementById('reviewsList');
+const reviewsList = document.getElementById('reviewsList');
 
-  if (reviewForm && reviewsList) {
-    let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
 
-    const renderReviews = () => {
-      reviewsList.innerHTML = '';
+/* ===== Отрисовка отзывов ===== */
+function renderReviews() {
+  reviewsList.innerHTML = '';
 
-      reviews.forEach((review) => {
-        const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+  reviews.forEach(review => {
+    const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
 
-        const reviewItem = document.createElement('div');
-        reviewItem.className = 'review-item';
+    const reviewItem = document.createElement('div');
+    reviewItem.className = 'review-item';
 
-        reviewItem.innerHTML = `
-          <div class="review-header">
-            <strong>${review.name}</strong>
-            <span class="review-stars">${stars}</span>
-          </div>
-          <div class="review-text">${review.text}</div>
-        `;
+    reviewItem.innerHTML = `
+      <div class="review-header">
+        <strong>${review.name}</strong>
+        <span class="review-stars">${stars}</span>
+      </div>
+      <div class="review-text">${review.text}</div>
+    `;
 
-        reviewsList.appendChild(reviewItem);
-      });
+    reviewsList.appendChild(reviewItem);
+  });
+}
+
+/* ===== Загрузка при открытии страницы ===== */
+if (reviewsList) {
+  renderReviews();
+}
+
+/* ===== Добавление нового отзыва ===== */
+if (reviewForm) {
+  reviewForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('reviewName').value.trim();
+    const rating = document.getElementById('reviewRating').value;
+    const text = document.getElementById('reviewText').value.trim();
+
+    if (!name || !text) return;
+
+    const newReview = {
+      name: name,
+      rating: rating,
+      text: text
     };
 
+    reviews.unshift(newReview);
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+
     renderReviews();
+    reviewForm.reset();
+  });
+}
 
-    reviewForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const name = document.getElementById('reviewName').value.trim();
-      const rating = document.getElementById('reviewRating').value;
-      const text = document.getElementById('reviewText').value.trim();
-
-      if (!name || !text) return;
-
-      const newReview = { name, rating, text };
-
-      reviews.unshift(newReview);
-      localStorage.setItem('reviews', JSON.stringify(reviews));
-
-      renderReviews();
-      reviewForm.reset();
-    });
-  }
+  
 
   // ====== Форма контактов ======
   const contactForm = document.querySelector(".contacts-row form");

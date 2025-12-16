@@ -40,8 +40,8 @@
       <div style="background:var(--card);padding:12px;border-radius:10px">
         <h3>Адрес</h3>
         <div class="small-muted">г. Москва, Ленинградское шоссе, 120</div>
-        <div style="margin-top:8px"><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (999) 333-33-33</a></div>
-        <div style="margin-top:6px"><strong>E-mail:</strong> <a href="mailto:info@cherie.example">info@cherie.example</a></div>
+        <div style="margin-top:8px"><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (968) 833-96-11</a></div>
+        <div style="margin-top:6px"><strong>E-mail:</strong> <a href="mailto:info@cherie.example">shebzukhova_zarina@mail.ri</a></div>
         <div style="margin-top:8px"><h4>Напишите нам</h4><form onsubmit="return false"><input placeholder="Имя" style="width:100%;padding:8px;margin-bottom:8px"><input placeholder="Телефон" style="width:100%;padding:8px;margin-bottom:8px"><textarea placeholder="Сообщение" style="width:100%;padding:8px"></textarea><button class="btn-primary" style="margin-top:8px">Отправить</button></form></div>
       </div>
     </div>
@@ -62,5 +62,20 @@
 </nav>
 
 <div class="burger-overlay" id="burgerOverlay"></div>
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const burgerMenu = document.getElementById('burgerMenu');
+  const burgerOverlay = document.getElementById('burgerOverlay');
+
+  burgerBtn.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    burgerOverlay.classList.toggle('active');
+  });
+
+  burgerOverlay.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    burgerOverlay.classList.remove('active');
+  });
+</script>
 </body>
 </html>

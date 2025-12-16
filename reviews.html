@@ -41,7 +41,6 @@
 
   <button type="submit" class="btn-primary">Отправить</button>
 </form>
-<div id="reviewsList" class="reviews-list"></div>
 </section>
 </div>
 <script src="js/scripts.js" defer></script>
@@ -58,5 +57,20 @@
 </nav>
 
 <div class="burger-overlay" id="burgerOverlay"></div>
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const burgerMenu = document.getElementById('burgerMenu');
+  const burgerOverlay = document.getElementById('burgerOverlay');
+
+  burgerBtn.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    burgerOverlay.classList.toggle('active');
+  });
+
+  burgerOverlay.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    burgerOverlay.classList.remove('active');
+  });
+</script>
 </body>
 </html>

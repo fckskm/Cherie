@@ -89,6 +89,8 @@
         </select>
       </div>
 
+    </div>
+
     <div style="flex:1;min-width:280px" class="panel">
       <h3>3. Подтверждение</h3>
       <input id="clientName" placeholder="Имя" class="input" style="width:100%;padding:10px;margin-bottom:8px">
@@ -113,5 +115,20 @@
 </nav>
 
 <div class="burger-overlay" id="burgerOverlay"></div>
+<script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const burgerMenu = document.getElementById('burgerMenu');
+  const burgerOverlay = document.getElementById('burgerOverlay');
+
+  burgerBtn.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    burgerOverlay.classList.toggle('active');
+  });
+
+  burgerOverlay.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+    burgerOverlay.classList.remove('active');
+  });
+</script>
 </body>
 </html>
